@@ -1,0 +1,17 @@
+Rozwijając temat:
+
+1. Ograniczenia procesu:
+   - `ulimit` może być używane do ustawiania ograniczeń zasobów dla pojedynczego procesu.
+   - W przypadku kodu z zad 2, ograniczenia pamięci ustawione za pomocą `ulimit` będą miały wpływ na działający program. Ograniczenia te obejmą wszystkie operacje pamięciowe, takie jak alokacja i dealokacja pamięci w trakcie wykonywania programu.
+
+2. Ograniczenia konta:
+   - Ograniczenia konta są zwykle ustawiane przez administratora systemu i dotyczą wszystkich procesów uruchomionych przez danego użytkownika.
+   - W przypadku `ulimit`, ograniczenia konta są ustawiane globalnie dla danego użytkownika, a nie dla pojedynczego procesu.
+   - Ograniczenia konta obejmą wszystkie procesy uruchomione przez użytkownika, niezależnie od tego, z jakiego źródła zostały uruchomione.
+
+3. Zastosowanie w kodzie:
+   - W przypadku kodu z zad 2, można by użyć `ulimit` do ustawienia ograniczenia dotyczącego zużycia pamięci przez pojedynczy proces.
+   - Na przykład, można by ustawić limit pamięci przed uruchomieniem programu za pomocą polecenia `ulimit -v limit_w_kilobajtach`.
+   - Po osiągnięciu limitu pamięci, proces zostanie przerwany.
+
+Warto jednak zauważyć, że `ulimit` wpływa na procesy w kontekście danej powłoki (np. Bash), więc ograniczenia będą miały zastosowanie tylko do procesów utworzonych w ramach tej konkretnej powłoki. Jeśli program uruchamiasz z innej powłoki, musisz tam również ustawić odpowiednie ograniczenia.

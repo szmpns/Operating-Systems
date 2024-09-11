@@ -1,0 +1,17 @@
+1. Stwórz dowiązania:
+Dowiązanie miękkie (`losowy-soft.dat`):
+
+ln -s losowy.dat losowy-soft.dat
+
+
+Dowiązanie twarde (`losowy-hard.dat`):
+     ln losowy.dat losowy-hard.dat
+
+2. Sprawdź zajętość przestrzeni:
+
+     ls -l losowy.dat losowy-soft.dat losowy-hard.dat
+
+     du -h losowy.dat losowy-soft.dat losowy-hard.dat
+
+     stat losowy.dat losowy-soft.dat losowy-hard.dat
+

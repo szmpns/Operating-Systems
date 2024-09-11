@@ -1,0 +1,23 @@
+
+1. Plik pusty (`zero.dat`):
+
+gzip -k zero.dat
+
+
+2. Plik z danymi losowymi (`losowy.dat`):
+
+gzip -k losowy.dat
+
+3. Plik z powielonymi danymi losowymi (`powielony-10MB.dat` i `powielony-1kB.dat`):
+
+gzip -k powielony-10MB.dat
+gzip -k powielony-1kB.dat
+
+Opcje stopnia kompresji różnią się w zależności od programu do kompresji. 
+
+gzip -k -9 zero.dat
+
+Gdzie `-9` oznacza najwyższy stopień kompresji.
+
+
+

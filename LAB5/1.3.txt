@@ -1,0 +1,22 @@
+1.Załóż system plików ext4:
+
+   mkfs.ext4 zero.dat
+
+2.Utwórz katalog, do którego zamontujesz system plików:
+   mkdir ~/myfilesystem
+
+3.Dodaj wpis do pliku `/etc/fstab` umożliwiający montowanie bez uprawnień root:
+   nano /etc/fstab
+
+   /path/to/zero.dat  /home/your_username/myfilesystem  ext4  loop,user,noauto  0  0
+
+
+4. Zamontuj system plików:
+   mount ~/myfilesystem
+
+5.Odmontuj system plików:
+
+   umount ~/myfilesystem
+
+   mount ~/myfilesystem
+   umount ~/myfilesystem
